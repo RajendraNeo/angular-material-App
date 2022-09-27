@@ -1,0 +1,71 @@
+<div style="width: 90%;">
+    <form [formGroup]="testFrom">
+        <mat-form-field appearance="standard" color="primary" class="w-100" floatLabel="auto">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="Enter Your Email" formControlName="email" [errorStateMatcher]="CustomErrorStateMatcher">
+            <mat-hint align="end">Up to 30 Characters</mat-hint>
+            <mat-icon matPrefix>email</mat-icon>
+            <mat-error *ngIf="getFormControl('email').hasError('required')"
+             [innerHTML]="getErrorMessage('email','required')">
+            </mat-error>
+            <mat-error *ngIf="getFormControl('email').hasError('email')"
+             [innerHTML]="getErrorMessage('email','email')">
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="standard" color="primary" class="w-100" floatLabel="auto">
+            <mat-label>Customer Name</mat-label>
+            <input type="text" matInput placeholder="Customer Name" formControlName="customerName"
+            [errorStateMatcher]="CustomErrorStateMatcher">
+            <mat-hint align="end">Up to 30 Characters</mat-hint>
+            <mat-icon matPrefix>person</mat-icon>
+            <mat-error *ngIf="getFormControl('customerName').hasError('required')"
+             [innerHTML]="getErrorMessage('customerName','required')">
+            </mat-error>
+            <mat-error *ngIf="getFormControl('customerName').hasError('pattern')"
+             [innerHTML]="getErrorMessage('customerName','pattern')">
+            </mat-error>
+            <mat-error *ngIf="getFormControl('customerName').hasError('maxlength')"
+             [innerHTML]="getErrorMessage('customerName','maxlength')">
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="standard" color="primary" class="w-100" floatLabel="auto">
+            <mat-label>Choose a Country</mat-label>
+            <mat-select formControlName="country">
+                <mat-option *ngFor="let country of countries" [value]="country.name">{{country.name}}</mat-option>
+            </mat-select>
+            <mat-hint align="end">Choose a Country</mat-hint>
+            <mat-icon matPrefix>place</mat-icon>
+            <mat-error *ngIf="getFormControl('country').hasError('required')"
+             [innerHTML]="getErrorMessage('country','required')">
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="standard" color="primary" class="w-100" floatLabel="auto">
+            <mat-label>City</mat-label>
+            <input type="text" matInput placeholder="City" formControlName="city" [matAutocomplete]="cityAutoComplete">
+            <mat-hint align="end">Choose or Type a City</mat-hint>
+            <mat-icon matPrefix>explore</mat-icon>
+
+            <mat-autocomplete #cityAutoComplete="matAutocomplete">
+                <mat-option *ngIf="isCityLoading">Loading...</mat-option>
+                <mat-option *ngFor="let city of cities" [value]="city.name">{{city.name}}</mat-option>
+            </mat-autocomplete>
+            <mat-error *ngIf="getFormControl('city').hasError('required')"
+             [innerHTML]="getErrorMessage('city','required')">
+            </mat-error>
+        </mat-form-field>
+        <div class="ml mt mb">
+            <mat-checkbox color="primary" formControlName="receiveNewsLetters">Receive News Letters</mat-checkbox>
+        </div>
+        <div class="mb mt">
+            <button type="submit" mat-stroked-button class="mr" color="primary" >Save</button>
+            <button type="button" mat-stroked-button class="mr" color="accent" >Cancel</button>
+            <button type="button" mat-stroked-button class="mr" color="warn" >delete</button>
+        </div>
+    </form>
+
+    <div class="mt">
+        {{testFrom.value |json}}
+    </div>
+
+</div>

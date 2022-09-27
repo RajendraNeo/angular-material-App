@@ -1,0 +1,27 @@
+<div class="mt" style="margin-top: 50px;">
+    <div class="stepper-wrapper">
+        <div *ngFor="let state of requestStatusProgress" class="stepper-item"
+            [ngClass]="state.status === 'passed' ? 'completed' : state.status === 'failed'? 'failed' : '' ">
+            <div class="step-counter">
+                <svg *ngIf="state.status == 'passed'" width="11" height="9" viewBox="0 0 11 9" fill="#fff"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10.6685 1.02242C11.0762 1.4301 11.0762 2.09107 10.6685 2.49875L5.40471 7.76259C4.99703 8.17026 4.33606 8.17026 3.92838 7.76259L1.29646 5.13067C0.888787 4.72299 0.888787 4.06202 1.29646 3.65434C1.70414 3.24667 2.36511 3.24666 2.77279 3.65434L4.66655 5.5481L9.19222 1.02242C9.59989 0.614748 10.2609 0.614748 10.6685 1.02242Z"
+                        fill="white" />
+                </svg>
+                <svg *ngIf="state.status == 'failed'" width="8" height="8" viewBox="0 0 8 8" fill="#fff"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.735247 0.734271C0.959067 0.510451 1.32195 0.510451 1.54577 0.734271L4.00613 3.19464L6.4665 0.734271C6.69032 0.510451 7.0532 0.510451 7.27702 0.734271C7.50084 0.95809 7.50084 1.32097 7.27702 1.54479L4.81665 4.00516L7.27702 6.46552C7.50084 6.68934 7.50084 7.05222 7.27702 7.27604C7.0532 7.49986 6.69032 7.49986 6.4665 7.27604L4.00613 4.81568L1.54577 7.27604C1.32195 7.49986 0.959067 7.49986 0.735247 7.27604C0.511428 7.05222 0.511428 6.68934 0.735247 6.46552L3.19561 4.00516L0.735247 1.54479C0.511428 1.32097 0.511428 0.95809 0.735247 0.734271Z"
+                        fill="white" stroke="white" stroke-width="0.471985" stroke-linecap="round" />
+                </svg>
+                <svg *ngIf="state.status == 'empty'" width="8" height="2" viewBox="0 0 8 2" fill="#800B3275" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.372192" y="0.09375" width="7.25568" height="1.81392" rx="0.90696" fill="#0B3275"
+                        fill-opacity="0.5" />
+                </svg>
+    
+            </div>
+            <!-- <div *ngIf="!NoNames" class="step-name">{{state.title}}</div> -->
+        </div>
+</div>
+</div>

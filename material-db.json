@@ -1,0 +1,28 @@
+{
+  "countries":[
+      {"name": "Afghanistan", "id": 1}, 
+      {"name": "American Samoa", "id": 2}, 
+      {"name": "Armenia", "id": 3}, 
+      {"name": "Australia", "id": 4}, 
+      {"name": "Bangladesh", "id": 5}, 
+      {"name": "Canada", "id": 6},  
+      {"name": "China", "id": 7},  
+      {"name": "Comoros", "id": 8}, 
+      {"name": "Iceland", "id": 9}, 
+      {"name": "India", "id": 10}, 
+      {"name": "Indonesia", "id": 11},  
+      {"name": "Iraq", "id": 12} 
+  ],
+  "cities":[
+      {"name": "Delhi", "id": 1}, 
+      {"name": "United Kingdom", "id": 2}, 
+      {"name": "United State", "id": 3}, 
+      {"name": "Abu Dhabi", "id": 4}, 
+      {"name": "Amsterdam", "id": 5}, 
+      {"name": "Italy", "id": 6},  
+      {"name": "London", "id": 7},  
+      {"name": "Dhaka", "id": 8}, 
+      {"name": "Colombo", "id": 9}, 
+      {"name": "Kathmandu", "id": 10}
+  ]
+}

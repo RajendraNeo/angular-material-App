@@ -1,0 +1,127 @@
+<mat-divider></mat-divider>
+<h3>Buttons</h3>
+<section>
+    <div class="example-label">Basic</div>
+    <div class="example-button-row">
+      <button mat-button class="mr">Basic</button>
+      <button mat-button class="mr" color="primary">Primary</button>
+      <button mat-button class="mr" color="accent">Accent</button>
+      <button mat-button class="mr" color="warn">Warn</button>
+      <button mat-button class="mr" disabled>Disabled</button>
+      <a mat-button class="mr" href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Raised</div>
+    <div class="example-button-row">
+      <button mat-raised-button class="mr">Basic</button>
+      <button mat-raised-button class="mr" color="primary">Primary</button>
+      <button mat-raised-button class="mr" color="accent">Accent</button>
+      <button mat-raised-button class="mr" color="warn">Warn</button>
+      <button mat-raised-button class="mr" disabled>Disabled</button>
+      <a mat-raised-button class="mr" href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Stroked</div>
+    <div class="example-button-row">
+      <button mat-stroked-button class="mr">Basic</button>
+      <button mat-stroked-button class="mr" color="primary" disableRipple>Primary</button>
+      <button mat-stroked-button class="mr" color="accent" disableRipple>Accent</button>
+      <button mat-stroked-button class="mr" color="warn">Warn</button>
+      <button mat-stroked-button class="mr" disabled>Disabled</button>
+      <a mat-stroked-button class="mr" href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Flat</div>
+    <div class="example-button-row">
+      <button mat-flat-button class="mr">Basic</button>
+      <button mat-flat-button class="mr" color="primary">Primary</button>
+      <button mat-flat-button class="mr" color="accent">Accent</button>
+      <button mat-flat-button class="mr" color="warn">Warn</button>
+      <button mat-flat-button class="mr" disabled>Disabled</button>
+      <a mat-flat-button class="mr" href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Icon</div>
+    <div class="example-button-row">
+      <div class="example-flex-container">
+        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+          <mat-icon>home</mat-icon>
+        </button>
+        <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+          <mat-icon>open_in_new</mat-icon>
+        </button>
+      </div>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+<h3>Input</h3>  
+<div style="display: flex;" class="w-100">
+    <div class="mr w-100" style="flex:1; margin-right: 25px !important;">
+        <span style="display: block;">No Floating Label</span>
+        <mat-form-field appearance="legacy" class="w-100" floatLabel="never">
+            <mat-label>Customer Name</mat-label>
+            <input type="text" matInput placeholder="Customer Name">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </div>
+    <div class="w-100" style="flex:1">
+        <span style="display: block;"> Floating Label</span>
+        <mat-form-field appearance="legacy" class="w-100">
+            <mat-label>Customer Name</mat-label>
+            <input type="text" matInput placeholder="Customer Name">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </div>
+</div>
+<mat-divider style="margin:20px 0;"></mat-divider>
+<div style="display: flex;" class="w-100">
+    <div class="mr w-100" style="flex:1; margin-right: 25px !important;">
+        <span style="display: block;">Fill / Hide Required</span>
+        <mat-form-field appearance="fill" class="w-100" floatLabel="never" hideRequiredMarker>
+            <mat-label>Customer Name</mat-label>
+            <input type="text" matInput placeholder="Customer Name" required="required">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </div>
+    <div class="w-100" style="flex:1">
+        <span style="display: block;">Outline / Required</span>
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Customer Name</mat-label>
+            <input type="text" matInput placeholder="Customer Name" required="required">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </div>
+</div>
+<mat-divider></mat-divider>
+<h3>Select</h3>
+<mat-form-field appearance="standard" color="primary" class="w-100" floatLabel="auto">
+  <mat-label>Customer Name</mat-label>
+  <mat-select required="required">
+      <mat-option value="Afghanistan">Afghanistan</mat-option>
+      <mat-option value="Australia">Australia</mat-option>
+      <mat-option value="Egypt">Egypt</mat-option>
+      <mat-option value="India">India</mat-option>
+      <mat-option value="Iraq">Iraq</mat-option>
+  </mat-select>
+  <mat-hint align="end">Choose a Country</mat-hint>
+  <mat-icon matPrefix>place</mat-icon>
+</mat-form-field>
+<div>
+    
